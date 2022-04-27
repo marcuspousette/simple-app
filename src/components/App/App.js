@@ -13,7 +13,7 @@ function App() {
 	return (
 		<div>
 			<Users setSelectedUsers={setSelectedUsers} />
-			<SelectedUsers users={selectedUsers} />
+			<SelectedUsers />
 		</div>
 	);
 }

@@ -1,4 +1,5 @@
 import NamePlate from './NamePlate';
+import { connect } from 'react-redux';
 
 const SelectedUsers = (props) => {
 	const renderNamePlates = () => {
@@ -8,4 +9,8 @@ const SelectedUsers = (props) => {
 	return <div className="SelectedUsers">{renderNamePlates()}</div>;
 };
 
-export default SelectedUsers;
+const mapState = (state) => {
+	return { users: state.users };
+};
+
+export default connect(mapState)(SelectedUsers);
