@@ -20,23 +20,10 @@ const Users = ({ setSelectedUsers }) => {
 
 	const renderUsers = () => {
 		// [<UserCard />, <UserCard />, <UserCard />, <UserCard />];
-		return users.map((user, i) => <UserCard key={i} user={user} />);
+		return users.map((user, i) => <UserCard key={i} user={user} setSelectedUsers={setSelectedUsers} />);
 	};
 
-	return (
-		<div>
-			{renderUsers()}
-			<button
-				onClick={() =>
-					setSelectedUsers((oldState) => {
-						return [...oldState, 1];
-					})
-				}
-			>
-				Add user
-			</button>
-		</div>
-	);
+	return <div>{renderUsers()}</div>;
 };
 
 export default Users;

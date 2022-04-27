@@ -1,10 +1,10 @@
-const UserCard = (props) => {
+const UserCard = ({ user, setSelectedUsers }) => {
 	return (
 		<div className="UserCard">
-			<p>{props.user.name}</p>
-			<p>{props.user.email}</p>
-			<p>{props.user.phone}</p>
-			<button>Add user</button>
+			<p>{user.name}</p>
+			<p>{user.email}</p>
+			<p>{user.phone}</p>
+			<button onClick={() => setSelectedUsers((os) => [...os, user.name])}>Add user</button>
 		</div>
 	);
 };
